@@ -6,11 +6,11 @@ edition = "2018"
 
 
 [[bin]]
-name = "ndebug"
+name = "NAME"
 path = "gc.rs"
 
 [profile.release]
 lto = true
 codegen-units = 1
 opt-level = 3
-debug = false
+debug = DEBUG

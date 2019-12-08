@@ -41,8 +41,9 @@ impl Distribution<ACGT> for Standard {
 const THREE_GB: usize = 3_221_225_000;
 
 fn main() {
+    let args: Vec<String> = std::env::args().collect();
     let mut writer = {
-        let file = File::create("/tmp/acgt").unwrap();
+        let file = File::create(&args[1]).unwrap();
         BufWriter::new(file)
     };
 
